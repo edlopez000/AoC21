@@ -23,3 +23,4 @@ rl.on("line", (currentNum) => {
 
 // Not the most optimal solution because increments comes out of the console.log and isn't put in a variable
 // Need to get more familiar with readFileSync
+// Also danwed on me that this code is not testable at all, I want to start incorporating tests into these at some point
