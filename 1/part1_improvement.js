@@ -8,6 +8,7 @@ const input = fs
     return parseInt(item);
   });
 
+// The forEach is mutating a variable outside of it's scope, that is not desirable
 function totalIncrement(arr) {
   let sum = 0;
 
