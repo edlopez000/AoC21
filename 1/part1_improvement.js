@@ -1,18 +1,16 @@
-const fs = require("fs");
-const readline = require("readline");
+/* eslint-disable no-console */
+const fs = require('fs');
 
 const input = fs
-  .readFileSync("input.txt", "utf-8")
-  .split("\n")
-  .map((item) => {
-    return parseInt(item);
-  });
+  .readFileSync('input.txt', 'utf-8')
+  .split('\n')
+  .map((item) => parseInt(item, 10));
 
 // The forEach is mutating a variable outside of it's scope, that is not desirable
 function totalIncrement(arr) {
   let sum = 0;
 
-  let incrementDetect = (item, index, array) => {
+  const incrementDetect = (item, index, array) => {
     if (item > array[index - 1]) {
       sum += 1;
     }
@@ -21,6 +19,6 @@ function totalIncrement(arr) {
   return sum;
 }
 
-let total = totalIncrement(input);
+const total = totalIncrement(input);
 
 console.log(`total increment = ${total}`);
